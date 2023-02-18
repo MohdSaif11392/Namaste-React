@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+</head>
+
+<body>
+    <div id="root">Not rendered</div>
+
+    <!-- <script>
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Namaste Everyone from JavaScript!.";
+
+        const root = document.getElementById("root");
+        root.appendChild(heading);
+    </script> -->
+
+    <!-- CDN -> Content Delivery Network -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        const heading = React.createElement("h1", { id: "title" }, "Namaste Everyone!");
+        console.log(heading);
+
+        const heading2 = React.createElement("h2", { id: "title2" }, "Hello Saif");
+
+        const container = React.createElement("div", { id: "container" }, [heading, heading2]);
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        //passing the react element inside the root.
+        // root.render(heading);
+        // root.render(heading2);
+
+        root.render(container);
+    </script>
+
+</body>
+
+</html>
